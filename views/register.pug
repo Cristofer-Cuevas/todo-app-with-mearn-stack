@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="register.css")
+		title Sign Up Page
+	body 
+	main.container
+		form.form
+			div.things-you-can-do
+				h1 Things this page can do
+				ul 
+					li The user login is saved server-side.
+					li If a user already exists with the name you are trying access it tells you so.
+					li Once yours crediantials are right you're going to be redirected to the profile page where you can start to create todos.
+					li The password is being hashed server-side
+			div.comand-container
+				img(src="before-arrow.svg", alt="before-arrow" class='before-arrow')
+				h1.title Sign Up
+				img(src="next-arrow.svg", alt="next-arrow" class="next-arrow")
+			div
+				input(type="text" paceholder='Username' name='username' ).inp-username 
+				p.user-exist
+			div
+				input(type="password" placeholder='Password' name="password").inp-password 
+			button(type='submit').btn-submit Log in
+	script(src="register.js") 

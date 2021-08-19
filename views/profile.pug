@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		link(rel="stylesheet", href="profile.css")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Profile
+	body 
+		-let taskNumber = 0
+		-let taskNumber2 = -1
+		-let taskNumber3 = -1
+		h1 Welcome #{user.username}
+		main.main-container
+			div.add-form
+				h1.title Todo App
+				form(action="/profileform", method='POST').form
+					input(type="text",  placeholder='What needs to be done?' name="todoname").add-inp
+					button(type="submit").add-btn Add
+				p.length-error Is your task name really that long? Please describe it with shorter keywords
+				p.tasks-length-error It seems you are very busy, sorry you can't add more than 10 Todos
+			div.dashboard-container
+				table.table
+					thead.thead
+						tr
+							th No.
+							th Todo item
+							th Status
+							th.th-actions Actions
+					tbody.tbody
+						each dbUser in dbData
+							if dbUser.user.password == user.password && dbUser.user.username == user.username
+								tr
+									td= ++taskNumber
+									td.taskName= dbUser.todoname
+									td.table-data-status= dbUser.todostatus
+									td.td-delete-finished
+										button(type='submit' data-index= ++taskNumber2 ).delete-btn  Delete
+										button(type="submit" data-index= ++taskNumber3 ).finished-btn Finished
+	script(src="profile.js") 

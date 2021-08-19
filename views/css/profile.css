@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(1024px 70%);
+  grid-template-rows: auto auto;
+  place-content: center;
+  place-items: center;
+}
+
+.main-container {
+  width: 100%;
+  /* height: 75vh; */
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 200px;
+
+  /* background-color: red; */
+  place-items: center;
+  /* place-content: end; */
+}
+
+.title {
+  text-align: center;
+}
+
+.add-form {
+  text-align: center;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.add-inp {
+  width: 12rem;
+  padding: 0.3rem 0;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.tasks-length-error {
+  display: none;
+}
+
+.length-error {
+  display: none;
+}
+
+.show-error {
+  display: block;
+}
+
+.add-btn {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  background-color: blue;
+  color: white;
+  padding: 0.4rem 1.3rem;
+  border: 0;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+/* TABLE CONTAINER */
+.dashboard-container {
+  max-width: 80%;
+  min-width: 700px;
+  /* width: 80%; */
+}
+
+.table {
+  border-collapse: collapse;
+  border: 0.1rem solid black;
+  text-align: center;
+  width: 100%;
+}
+
+.delete-btn {
+  background-color: hsl(354, 71%, 53%);
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.5rem;
+  border: 0;
+  cursor: pointer;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.finished-btn {
+  background-color: hsl(136, 62%, 40%);
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.5rem;
+  border: 0;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+/* ADDING BORDER TO TABLE DATA(td) AND TABLE HEAD(th)*/
+td,
+th {
+  border: 0.1rem solid black;
+}
+
+.taskName {
+  /* figured out this line makes a paragraph without spaces get hide in case the size of the paragraph exceed the size of the table data(td)  */
+  overflow: hidden;
+  max-width: 8rem;
+  height: auto;
+}
+
+.table-row {
+  background-color: hsl(136, 40%, 84%);
+}

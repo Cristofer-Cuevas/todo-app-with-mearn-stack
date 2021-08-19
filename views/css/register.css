@@ -1,0 +1,123 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* background-color: blue; */
+  /* width: 90%; */
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  min-width: 25rem;
+  height: 50vh;
+  border-radius: 1.5rem;
+  /*justify-content: center;
+  */
+  align-items: center;
+  background-color: hsl(193, 100%, 63%);
+  flex-direction: column;
+  row-gap: 2rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+.things-you-can-do {
+  z-index: -1;
+  width: 22rem;
+  /* background-color: red; */
+  position: absolute;
+  transition: left 2s;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -ms-transition: left 2s;
+  -o-transition: left 2s;
+  left: 0;
+}
+
+.get-container-to-left {
+  left: -22rem;
+}
+
+.comand-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 25rem;
+}
+
+.inp-password {
+  background-image: url(lock_black_24dp.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-position: 2%;
+}
+.inp-username {
+  background-image: url(person_black_24dp.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-position: 2%;
+}
+
+.inp-username::placeholder,
+.inp-password::placeholder {
+  font-size: 0.9rem;
+  opacity: 1;
+}
+
+.inp-username,
+.inp-password {
+  width: 14rem;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.user-exist {
+  position: absolute;
+  margin: 0.1rem 0;
+  font-size: 0.9rem;
+  /* color: ; */
+}
+
+.btn-submit {
+  width: 109px;
+  font-weight: 900;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem 0;
+  color: white;
+  font-size: 1.5rem;
+  background-color: hsl(197, 100%, 37%);
+  cursor: pointer;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.next-arrow,
+.before-arrow {
+  cursor: pointer;
+}
+
+.turn-next-arrow {
+  transition: rotate 1s;
+  rotate: 180deg;
+}
